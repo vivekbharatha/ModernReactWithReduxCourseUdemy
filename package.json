@@ -19,6 +19,7 @@
   "homepage": "https://github.com/vivekbharatha/ModernReactWithReduxCourseUdemy#readme",
   "dependencies": {
     "babel-preset-stage-1": "^6.24.1",
+    "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "youtube-api-search": "0.0.5"
