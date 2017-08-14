@@ -9,7 +9,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="row">
+      <div className="row search-bar">
         <input
           className="form-control col-md-4 offset-md-4"
           value={ this.state.term }
