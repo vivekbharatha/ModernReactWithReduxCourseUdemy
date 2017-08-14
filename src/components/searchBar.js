@@ -13,11 +13,18 @@ class SearchBar extends Component {
         <input
           className="form-control col-md-4 offset-md-4"
           value={ this.state.term }
-          onChange={ (event) => this.setState({ term: event.target.value }) }
+          onChange={ (event) => this.onInputChange(event.target.value) }
         />
       </div>
     );
   }
+
+  onInputChange(term) {
+    this.setState({ term });
+    this.props.onTermChange(term);
+  }
+
+
 }
 
 export default SearchBar;
