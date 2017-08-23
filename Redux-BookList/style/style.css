@@ -1,0 +1,15 @@
+.search-bar {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.video-player {
+  margin-bottom: 5px;
+}
+
+.video-details {
+  border: 1px solid #dfdfdf;
+  padding: 5px;
+  border-radius: 3px;
+}
