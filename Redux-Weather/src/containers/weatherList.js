@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Chart from './../components/chart';
+
 class WeatherList extends Component {
   render() {
     return (
@@ -22,9 +24,16 @@ class WeatherList extends Component {
 
   renderWeather(cityObj) {
     const cityName = cityObj.city.name;
+    const temps = cityObj.list.map(weather => weather.main.temp);
+    const pressure = cityObj.list.map(weather => weather.main.pressure);
+    const humidity = cityObj.list.map(weather => weather.main.humidity);
+
     return (
       <tr key={cityName}>
         <td>{cityName}</td>
+        <td><Chart data={temps} color="red" /></td>
+        <td><Chart data={pressure} color="blue" /></td>
+        <td><Chart data={humidity} color="black" /></td>
       </tr>
     )
   }
