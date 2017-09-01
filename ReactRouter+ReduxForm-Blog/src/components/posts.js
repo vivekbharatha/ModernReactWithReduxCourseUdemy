@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Posts extends Component {
+import { getPosts } from './../actions';
+
+class Posts extends Component {
+  componentDidMount() {
+    this.props.getPosts();
+  }
+
   render() {
     return (
       <div>
@@ -9,3 +16,5 @@ export default class Posts extends Component {
     );
   }
 }
+
+export default connect(null, { getPosts })(Posts);
