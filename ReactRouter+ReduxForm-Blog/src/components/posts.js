@@ -22,6 +22,7 @@ class Posts extends Component {
   render() {
     return (
       <div>
+        <p>List of posts</p>
         {this.renderPosts()}
       </div>
     );
