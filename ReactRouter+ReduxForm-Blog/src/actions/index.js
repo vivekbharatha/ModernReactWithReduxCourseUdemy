@@ -5,6 +5,7 @@ const API_KEY = 'vivekbharatha';
 
 export const GET_POSTS = 'GET_POSTS';
 export const CREATE_POST = 'CREATE_POST';
+export const GET_POST = 'GET_POST';
 
 export function getPosts() {
   const request = axios.get(`${ROOT_URL}/posts?key=${API_KEY}`);
@@ -20,6 +21,15 @@ export function createPost(values, cb) {
 
   return {
     type: CREATE_POST,
+    payload: request
+  }
+}
+
+export function getPost(id, cb) {
+  const request = axios.get(`${ROOT_URL}/posts/${id}?key=${API_KEY}`);
+
+  return {
+    type: GET_POST,
     payload: request
   }
 }
