@@ -13,6 +13,9 @@ class PostsShow extends Component {
 
   render() {
     const { post } = this.props;
+    if (!post) {
+      return <div>Digging.....</div>
+    }
     return (
       <div>
         <h3>{ post.title }</h3>
@@ -24,7 +27,6 @@ class PostsShow extends Component {
 }
 
 function mapStateToProps({ posts }, ownProps) {
-  console.log(posts);
   return { post: posts[ownProps.match.params.id] };
 }
 
